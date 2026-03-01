@@ -33,6 +33,7 @@ app = FastAPI()
 def startup():
     Base.metadata.create_all(bind=engine)
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://learnsphere-rag-ui.onrender.com"],
@@ -51,15 +52,13 @@ os.makedirs(EXPORT_FOLDER, exist_ok=True)
 @app.get("/")
 def root():
     return {"message": "LearnSphere Questionnaire Tool Running"}
-    
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    print("PORT =", port)
+    uvicorn.run(app, host="0.0.0.0", port=port)
 def startup_event():
     print("PORT ENV VALUE:", os.environ.get("PORT"))
-    
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT"))
-    uvicorn.run(app, host="0.0.0.0", port=port)
-
-print("Current Port used ",  os.environ.get("PORT"))
 
 @app.post("/upload-questionnaire")
 def upload_questionnaire(
