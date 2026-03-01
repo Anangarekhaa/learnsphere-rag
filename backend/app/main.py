@@ -25,10 +25,7 @@ from app.auth import hash_password, verify_password, create_access_token, SECRET
 from app.chunking import chunk_text
 from app.embeddings import get_embedding
 
-
 load_dotenv()
-
-
 
 app = FastAPI()
 
@@ -44,8 +41,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-
 UPLOAD_FOLDER = "uploaded_files"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
@@ -53,14 +48,18 @@ EXPORT_FOLDER = "exports"
 os.makedirs(EXPORT_FOLDER, exist_ok=True)
 
 
-
 @app.get("/")
 def root():
     return {"message": "LearnSphere Questionnaire Tool Running"}
-
+    
+def startup_event():
+    print("PORT ENV VALUE:", os.environ.get("PORT"))
+    
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT"))
     uvicorn.run(app, host="0.0.0.0", port=port)
+
+print("Current Port used ":  os.environ.get("PORT"))
 
 @app.post("/upload-questionnaire")
 def upload_questionnaire(
