@@ -1,0 +1,33 @@
+1. Course Management
+
+LearnSphere enables institutions to create, manage, and publish online courses through an administrative dashboard. Instructors can organize course materials into modules and lessons. Supported content formats include PDF, Word documents, PowerPoint files, video files, external links, and embedded multimedia content.
+
+Courses may be scheduled by term or offered on a rolling enrollment basis. Institutions may archive completed courses while preserving associated academic records.
+
+2. Assessments and Grading
+
+The platform supports quizzes, assignments, and graded assessments. Instructors may configure multiple question types, including multiple choice, short answer, file upload, and rubric-based evaluations.
+
+Assignment submissions are securely stored and time-stamped upon upload. Late submission rules and grading weight configurations can be customized at the course level.
+
+Grades are recorded in a centralized gradebook accessible to authorized instructors and administrators. Students may view their individual grades and instructor feedback through the student portal.
+
+3. Student Progress Tracking
+
+LearnSphere provides dashboards that allow instructors to monitor student activity and course progression. Metrics include login frequency, assignment completion rates, assessment scores, and overall course completion percentage.
+
+Administrators may generate institutional-level reports summarizing enrollment statistics, engagement trends, and academic performance indicators.
+
+Progress tracking data is available in real time and may be exported in standard reporting formats.
+
+4. Integration Capabilities
+
+LearnSphere supports integration with institutional systems through secure APIs. The platform integrates with identity providers via SAML 2.0 and OpenID Connect as described in the Identity and Access Management document.
+
+Institutions may configure integrations with Student Information Systems (SIS) to synchronize enrollment and roster data. API access requires authentication credentials and follows documented access control procedures.
+
+5. Mobile and Accessibility Support
+
+LearnSphere is accessible through modern web browsers and is optimized for mobile devices and tablets. The platform follows accessibility best practices to support users with disabilities.
+
+Accessibility features include keyboard navigation support, screen reader compatibility, and scalable text rendering.

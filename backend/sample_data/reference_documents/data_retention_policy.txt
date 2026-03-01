@@ -1,0 +1,39 @@
+LearnSphere Data Retention Policy
+
+1. Scope of Data
+
+LearnSphere stores student account data, including names, email addresses, institutional identifiers, course enrollment details, assignment submissions, grades, and progress tracking information.
+
+The platform does not intentionally collect sensitive personal data beyond what institutions provide.
+
+2. Retention During Active Contract
+
+Student data is retained for the duration of the institution’s active subscription agreement with LearnSphere.
+
+Data remains accessible to authorized institutional administrators during the contract period.
+
+3. Contract Termination
+
+Upon contract termination, student data is deleted within 30 days unless otherwise required by law.
+
+Institutions may request written confirmation of deletion.
+
+Data deletion processes include removal from active databases and scheduled deletion from backup systems following backup retention timelines.
+
+4. Early Deletion Requests
+
+Institutions may request deletion of specific student records prior to contract termination.
+
+Such requests are processed within 15 business days.
+
+5. Log Retention
+
+System logs related to authentication, administrative access, and security monitoring are retained for 12 months.
+
+Logs are used exclusively for operational troubleshooting, monitoring, and security investigations.
+
+6. Aggregated Analytics
+
+Aggregated and anonymized analytics data may be retained for product improvement and reporting purposes.
+
+Such aggregated data does not contain information that can identify individual students.

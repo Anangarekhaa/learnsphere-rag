@@ -1,0 +1,29 @@
+Identity and Access Management
+
+1. Authentication Methods
+
+LearnSphere supports Single Sign-On (SSO) integration using SAML 2.0 and OpenID Connect (OIDC).
+
+Institutions may integrate their existing identity providers to centralize authentication and lifecycle management.
+
+Accounts not using SSO are protected by enforced password complexity requirements.
+
+2. Role-Based Authorization
+
+Role-based permissions allow institutions to define access levels for administrators, instructors, teaching assistants, and students.
+
+Permissions govern access to course creation tools, grading systems, reporting dashboards, and system configuration settings.
+
+Role definitions can be customized to align with institutional requirements.
+
+3. Multi-Factor Authentication
+
+Multi-factor authentication (MFA) is required for LearnSphere internal administrative users with access to production systems.
+
+Institutions may optionally enable MFA for institutional users based on their own security policies.
+
+4. Account Monitoring
+
+Authentication attempts are logged and monitored.
+
+Accounts are temporarily locked after repeated failed login attempts to prevent brute-force attacks.

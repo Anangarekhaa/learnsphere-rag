@@ -1,0 +1,43 @@
+LearnSphere Infrastructure Overview
+
+1. Cloud Hosting Architecture
+
+LearnSphere is hosted on Amazon Web Services (AWS). Primary production systems operate in the United States within the us-east-1 region.
+
+Infrastructure is deployed using infrastructure-as-code templates to ensure consistency and repeatability.
+
+Production environments are isolated from development and staging environments to reduce risk of data leakage.
+
+2. Network Segmentation
+
+The architecture is segmented into application, database, and administrative layers.
+
+Production databases reside within private subnets and are not directly accessible from the public internet.
+
+Access to administrative interfaces is restricted to authorized IP ranges and requires multi-factor authentication.
+
+Firewall rules restrict inbound and outbound traffic to required services only.
+
+3. Backup and Disaster Recovery
+
+Automated backups of production databases are performed daily.
+
+Backups are encrypted and retained for 30 days. Backup storage is logically separated from live production systems.
+
+Backup restoration procedures are tested annually to validate data integrity and operational readiness.
+
+A disaster recovery plan documents recovery objectives and escalation procedures.
+
+4. High Availability
+
+Application services are deployed across multiple availability zones within the AWS region.
+
+Load balancers distribute incoming traffic across multiple instances to improve reliability and performance.
+
+Health checks automatically remove unhealthy instances from rotation.
+
+5. Change Management
+
+Infrastructure changes follow documented change management processes. Proposed changes are reviewed and approved prior to deployment.
+
+All changes are tracked in version control systems for auditability.

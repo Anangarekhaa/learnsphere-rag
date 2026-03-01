@@ -1,0 +1,15 @@
+1. What cloud provider hosts LearnSphere, and in which region are primary production systems located?
+2. Describe how student data is encrypted both at rest and in transit.
+3. What authentication methods are supported for institutional users?
+4. Is multi-factor authentication required for all users of the platform?
+5. How long is student data retained after contract termination?
+6. What types of student data does LearnSphere store?
+7. What uptime commitment does LearnSphere provide?
+8. How are production databases protected from public internet access?
+9. Does LearnSphere conduct third-party penetration testing?
+10. What controls are in place to manage vendor risk?
+11. Can institutions request deletion of specific student records before contract termination?
+12. How does LearnSphere support compliance with education privacy regulations?
+13. What reporting or analytics capabilities are available to administrators?
+14. What is the backup retention period for production databases?
+15. Does LearnSphere provide a publicly documented bug bounty program?

@@ -1,0 +1,34 @@
+LearnSphere Service Level and Support Policy
+1. Service Availability
+
+LearnSphere targets 99.9% monthly uptime for production services, excluding scheduled maintenance windows.
+
+System availability is monitored continuously using automated monitoring tools. In the event of unplanned outages, technical teams initiate incident response procedures as defined in internal documentation.
+
+2. Scheduled Maintenance
+
+Scheduled maintenance activities are performed during predefined maintenance windows to minimize disruption. Institutions are notified in advance of planned maintenance that may impact service availability.
+
+Emergency maintenance may be performed when necessary to address critical security vulnerabilities or operational risks.
+
+3. Support Services
+
+LearnSphere provides technical support to institutional administrators via email-based ticketing.
+
+Standard support hours are Monday through Friday, 9:00 AM to 6:00 PM Eastern Time, excluding public holidays.
+
+Critical production-impacting issues are prioritized for expedited response and escalation to engineering teams.
+
+4. Incident Management
+
+All incidents are logged and categorized based on severity level.
+
+Incident response procedures include identification, containment, remediation, and post-incident review.
+
+Institutions are notified of confirmed security incidents in accordance with contractual notification obligations.
+
+5. Customer Responsibilities
+
+Institutions are responsible for managing user permissions within their configured roles and for maintaining accurate user account information.
+
+Institutions are also responsible for configuring optional security settings, such as enabling multi-factor authentication for institutional users where applicable.

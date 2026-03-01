@@ -1,0 +1,41 @@
+LearnSphere Security Policy
+
+1. Data Protection and Encryption
+
+LearnSphere encrypts all student and institutional data stored in production databases using AES-256 encryption at rest. Encryption is enforced at the storage layer and managed through the cloud provider’s Key Management Service (KMS). Encryption keys are rotated periodically in accordance with internal key lifecycle management procedures.
+
+All backups, database snapshots, and storage volumes are encrypted using the same encryption standards. Access to encryption keys is restricted to authorized infrastructure engineers and is logged for auditing purposes.
+
+All communication between users and the LearnSphere platform is encrypted using TLS 1.2 or higher. HTTPS is strictly enforced across all production environments. Weak cipher suites and legacy protocols are disabled. Certificates are issued and renewed automatically using managed certificate services.
+
+2. Access Control
+
+Access to production systems is governed by a role-based access control (RBAC) framework. Access is provisioned based on documented business justification and approved by management.
+
+The principle of least privilege is enforced for all system access. Employees are granted only the minimum level of access necessary to perform their job responsibilities.
+
+Administrative access to production systems requires multi-factor authentication (MFA). Privileged sessions are logged and monitored for unusual activity. Access reviews are conducted quarterly to ensure permissions remain appropriate.
+
+3. Secure Development Practices
+
+All code changes undergo peer review prior to deployment. Automated static application security testing (SAST) tools are integrated into the development pipeline.
+
+Dependency scanning is performed to identify known vulnerabilities in third-party libraries. Critical vulnerabilities are remediated prior to release.
+
+Development, staging, and production environments are logically separated to prevent unauthorized data exposure.
+
+4. Vulnerability Management
+
+LearnSphere conducts quarterly automated vulnerability scans across infrastructure and application layers.
+
+An independent third party performs annual penetration testing. Findings are documented, prioritized by severity, and remediated within defined timelines.
+
+Security patches are applied regularly following internal change management procedures.
+
+5. Security Awareness and Monitoring
+
+All employees complete annual security awareness training covering phishing prevention, password hygiene, social engineering risks, and data protection best practices.
+
+Security monitoring tools analyze authentication events, privilege escalations, and unusual network activity. Alerts are reviewed by designated personnel.
+
+Incident response procedures are documented separately and include defined escalation paths.

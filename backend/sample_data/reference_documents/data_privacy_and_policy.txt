@@ -1,0 +1,29 @@
+1. Data Ownership
+
+Institutions retain ownership of all student and institutional data stored within the LearnSphere platform.
+
+LearnSphere processes student data solely for the purpose of providing contracted educational services.
+
+2. Regulatory Alignment
+
+LearnSphere is designed to support institutional compliance with applicable education data protection regulations, including the Family Educational Rights and Privacy Act (FERPA) in the United States.
+
+The platform provides access controls, audit logging, and data deletion capabilities to support institutional regulatory requirements.
+
+3. Data Access Controls
+
+Access to student records is governed by role-based permissions as described in the Identity and Access Management documentation.
+
+Institutions determine which administrators, instructors, and staff members are authorized to access specific student information.
+
+4. Data Processing and Subprocessors
+
+LearnSphere utilizes approved subprocessors for infrastructure hosting and related services as described in the Compliance and Vendor Management document.
+
+Subprocessors process student data only under documented contractual obligations.
+
+5. Data Subject Requests
+
+Institutions are responsible for responding to student requests related to access, correction, or deletion of academic records.
+
+LearnSphere provides administrative tools that enable institutions to export or delete student data in accordance with institutional policies.

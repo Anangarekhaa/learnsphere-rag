@@ -1,0 +1,33 @@
+Compliance and Vendor Management
+
+1. Compliance Alignment
+
+LearnSphere aligns its security controls with SOC 2 Type II requirements.
+
+Internal policies are mapped to ISO 27001 best practice standards to guide risk assessment and control implementation.
+
+Periodic internal reviews assess alignment with documented controls.
+
+2. Employee Screening
+
+Background checks are conducted prior to hiring full-time employees.
+
+Contractors with access to sensitive systems undergo equivalent screening procedures.
+
+Employees are required to sign confidentiality agreements.
+
+3. Vendor Risk Management
+
+LearnSphere uses third-party subprocessors for services such as cloud hosting, infrastructure monitoring, and email delivery.
+
+All subprocessors undergo documented security due diligence prior to engagement.
+
+Subprocessors are contractually obligated to maintain appropriate security safeguards.
+
+4. Ongoing Vendor Oversight
+
+Vendor risk assessments are reviewed annually.
+
+Security documentation from subprocessors is periodically evaluated.
+
+Incident notification obligations are defined in vendor agreements.
