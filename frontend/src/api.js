@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://learnsphere-backend.onrender.com",
+  baseURL: "https://learnsphere-rag.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
