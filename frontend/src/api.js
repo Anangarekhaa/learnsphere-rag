@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://learnsphere-backend-production-1d24.up.railway.app/",
 });
 
 api.interceptors.request.use((config) => {
