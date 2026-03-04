@@ -11,8 +11,9 @@ MODEL_NAME = "llama-3.1-8b-instant"
 
 def generate_answer(question: str, retrieved_chunks: list):
     context = "\n\n".join(
-        [chunk.chunk_text for _, chunk in retrieved_chunks[:2]]
+        [chunk.chunk_text for _, chunk in retrieved_chunks[:3]]
     )
+    citation = retrieved_chunks[0][1].document.filename
 
     prompt = f"""
 You are answering a vendor security questionnaire for LearnSphere.
@@ -32,8 +33,10 @@ Reference Material:
 
 Instructions:
 - Provide a concise answer (2–4 sentences).
-- Include citation exactly in this format:
-[reference_file_name.txt]
+- Base the answer strictly on the reference text.
+- End the answer with this citation exactly:
+
+[{citation}]
 """
 
     response = client.chat.completions.create(

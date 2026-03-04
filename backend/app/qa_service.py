@@ -6,30 +6,47 @@ from app.embeddings import get_embedding
 THRESHOLD = 0.40
 
 
+HIGH_SCORE = 0.70
+MEDIUM_SCORE = 0.50
+
+HIGH_GAP = 0.10
+MEDIUM_GAP = 0.05
+
+
 def compute_confidence(results):
     if not results:
         return "None"
 
-    top_score = results[0][0]
+    scores = [r[0] for r in results]
 
+    top_score = scores[0]
+
+   
     if top_score < THRESHOLD:
         return "None"
 
-    if len(results) == 1:
-        return "Medium"
+    
+    if len(scores) == 1:
+        if top_score >= HIGH_SCORE:
+            return "High"
+        elif top_score >= MEDIUM_SCORE:
+            return "Medium"
+        else:
+            return "Low"
 
-    second_score = results[1][0]
+    second_score = scores[1]
     gap = top_score - second_score
 
-    HIGH_GAP = 0.15
-    MEDIUM_GAP = 0.08
-
-    if gap >= HIGH_GAP:
+    
+    if top_score >= HIGH_SCORE and gap >= MEDIUM_GAP:
         return "High"
-    elif gap >= MEDIUM_GAP:
+
+   
+    if top_score >= MEDIUM_SCORE:
         return "Medium"
-    else:
-        return "Low"
+
+   
+    return "Low"
 
 
 def answer_question(question: str, user_id: str):
