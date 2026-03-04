@@ -1,29 +1,33 @@
+from huggingface_hub import InferenceClient
 import numpy as np
-from sentence_transformers import SentenceTransformer
+import os
+from dotenv import load_dotenv
 
-_model = None
+load_dotenv()
 
+client = InferenceClient(
+    provider="hf-inference",
+    api_key=os.getenv("HF_TOKEN")
+)
 
-def get_model():
-    global _model
-    if _model is None:
-        _model = SentenceTransformer("all-MiniLM-L6-v2")
-    return _model
+def normalize(vec):
+    vec = np.array(vec)
+    norm = np.linalg.norm(vec)
+    if norm == 0:
+        return vec
+    return vec / norm
 
 
 def get_embedding(text):
-    model = get_model()
-    
-    embedding = model.encode(
+    embedding = client.feature_extraction(
         text,
-        convert_to_numpy=True,
-        normalize_embeddings=True,
-        batch_size=32
+        model="sentence-transformers/all-MiniLM-L6-v2"
     )
-    
-    return [float(x) for x in embedding]
+
+    embedding = normalize(embedding)
+
+    return embedding.tolist()
 
 
 def cosine_similarity(vec1, vec2):
     return float(np.dot(vec1, vec2))
-
