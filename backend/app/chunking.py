@@ -1,43 +1,39 @@
-from transformers import AutoTokenizer
-
-tokenizer = AutoTokenizer.from_pretrained("sentence-transformers/all-MiniLM-L6-v2")
+import re
 
 
 def chunk_text(text: str, chunk_size=250, overlap=50, min_chunk_tokens=30):
-    encoding = tokenizer(
-        text,
-        add_special_tokens=False,
-        return_offsets_mapping=True
-    )
 
-    offsets = encoding["offset_mapping"]
-    total_tokens = len(offsets)
+    words = re.findall(r"\S+", text)
+    total_tokens = len(words)
 
     chunks = []
-    start_token = 0
+    start = 0
 
-    while start_token < total_tokens:
-        end_token = min(start_token + chunk_size, total_tokens)
+    while start < total_tokens:
 
-      
-        if end_token - start_token < min_chunk_tokens:
+        end = min(start + chunk_size, total_tokens)
+
+    
+        if end - start < min_chunk_tokens:
             break
 
-        start_char = offsets[start_token][0]
-        end_char = offsets[end_token - 1][1]
+        chunk_words = words[start:end]
+        chunk = " ".join(chunk_words)
 
-        chunk = text[start_char:end_char]
+       
+        if end < total_tokens:
+            remaining_words = words[end:end + 40]
+            sentence_extension = " ".join(remaining_words)
+            period_match = re.search(r"\.", sentence_extension)
 
-        
-        if end_token < total_tokens:
-            remaining_text = text[end_char:]
-            period_index = remaining_text.find(".")
-            if 0 <= period_index <= 200:  
-                end_char += period_index + 1
-                chunk = text[start_char:end_char]
+            if period_match:
+                extension_length = period_match.start()
+                extra_words = sentence_extension[:extension_length].split()
+                chunk += " " + " ".join(extra_words)
 
         chunks.append(chunk.strip())
 
-        start_token += chunk_size - overlap
+        # Move window with overlap
+        start += chunk_size - overlap
 
     return chunks
